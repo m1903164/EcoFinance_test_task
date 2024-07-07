@@ -1,15 +1,9 @@
 <script setup>
-import {ref, onMounted} from "vue"
-
 const props = defineProps({
   dataFromServer: {
     type: Array,
     required: true
   }
-})
-
-onMounted(() => {
-  console.log(props.dataFromServer)
 })
 </script>
 
@@ -17,7 +11,7 @@ onMounted(() => {
   <div class="user-card">
     <el-card
         class="user-card__container"
-        v-for="user in dataFromServer"
+        v-for="user in props.dataFromServer"
         :key="user.login.uuid"
         shadow="hover"
     >

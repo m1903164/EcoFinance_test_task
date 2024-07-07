@@ -21,9 +21,6 @@ function Login() {
     user.email = defualtData.email
     user.password = defualtData.password
 
-    console.log('userStore =>', user.email)
-    console.log('userStore =>', user.password)
-
     router.push({name: 'Protected'})
   }else {
     alert('lox')
